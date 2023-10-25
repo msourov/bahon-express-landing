@@ -12,14 +12,23 @@ import {
 import { Link } from "react-router-dom";
 import "../styles/home.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFileLines } from "@fortawesome/free-solid-svg-icons";
-import { faBurger } from "@fortawesome/free-solid-svg-icons";
-import { faCartShopping } from "@fortawesome/free-solid-svg-icons";
-import { faBolt } from "@fortawesome/free-solid-svg-icons";
-import { faGift } from "@fortawesome/free-solid-svg-icons";
-import { faBoxesPacking } from "@fortawesome/free-solid-svg-icons";
+import {
+  faFileLines,
+  faBurger,
+  faCartShopping,
+  faBolt,
+  faGift,
+  faBoxesPacking,
+} from "@fortawesome/free-solid-svg-icons";
 
-// Now you can use faFileLines in your code
+import {
+  faClock,
+  faCalendarDay,
+  faCity,
+  faMapLocationDot,
+  faMoneyBill1,
+  faFileExcel,
+} from "@fortawesome/free-solid-svg-icons";
 
 const { Header, Footer, Sider, Content } = Layout;
 const items = ["Tracking", "Pricing", "Q&A", "Contact Us"];
@@ -77,14 +86,17 @@ function Home() {
                 Bahon Express is your ultimate delivery solution
               </h2>
               <h1 style={{ color: "#004188" }}>YOUR DELIVERY PARTNER</h1>
-              <Button type="primary" style={{ fontWeight: "bold" }}>
+              <Button
+                type="primary"
+                style={{ fontWeight: "bold", backgroundColor: "#5aa86c" }}
+              >
                 Become our Merchant
               </Button>
             </div>
-            <img src="./Bahonweb.svg" />
+            <img src="./Bahonweb.svg" alt="bahon logo" />
           </div>
           <div className="track-wrapper">
-            <h1 className="track-h1">Track Your Parcel</h1>
+            <h1>Track Your Parcel</h1>
             {/* <Form name="basic">
               <Form.Item
                 placeholder="PLACE ORDER ID"
@@ -141,12 +153,14 @@ function Home() {
               Some kind of product we deliver to our respected client
             </Divider>
             <Row gutter={16} style={{ justifyContent: "center" }}>
-              <Col className="gutter-row" md={4} sm={6}>
+              <Col className="gutter-row" md={4} sm={8}>
                 <Card
                   hoverable
                   style={{
                     width: 120,
                     backgroundColor: "#F1F7F7",
+                    fontWeight: "500",
+                    fontFamily: "'Playpen Sans', cursive",
                   }}
                   cover={
                     <FontAwesomeIcon
@@ -154,14 +168,18 @@ function Home() {
                       icon={faFileLines}
                     />
                   }
-                ></Card>
+                >
+                  Document
+                </Card>
               </Col>
-              <Col className="gutter-row" md={4} sm={6}>
+              <Col className="gutter-row" md={4} sm={8}>
                 <Card
                   hoverable
                   style={{
                     width: 120,
                     backgroundColor: "#F1F7F7",
+                    fontWeight: "500",
+                    fontFamily: "'Playpen Sans', cursive",
                   }}
                   cover={
                     <FontAwesomeIcon
@@ -169,28 +187,36 @@ function Home() {
                       icon={faBoxesPacking}
                     />
                   }
-                ></Card>
+                >
+                  Package
+                </Card>
               </Col>
 
-              <Col className="gutter-row" md={4} sm={6}>
+              <Col className="gutter-row" md={4} sm={8}>
                 <Card
                   hoverable
                   style={{
                     width: 120,
                     backgroundColor: "#F1F7F7",
+                    fontWeight: "500",
+                    fontFamily: "'Playpen Sans', cursive",
                   }}
                   cover={
                     <FontAwesomeIcon className="custom-icon" icon={faBurger} />
                   }
-                ></Card>
+                >
+                  Food
+                </Card>
               </Col>
 
-              <Col className="gutter-row" md={4} sm={6}>
+              <Col className="gutter-row" md={4} sm={8}>
                 <Card
                   hoverable
                   style={{
                     width: 120,
                     backgroundColor: "#F1F7F7",
+                    fontWeight: "500",
+                    fontFamily: "'Playpen Sans', cursive",
                   }}
                   cover={
                     <FontAwesomeIcon
@@ -198,32 +224,196 @@ function Home() {
                       icon={faCartShopping}
                     />
                   }
-                ></Card>
+                >
+                  Grocery
+                </Card>
               </Col>
-              <Col className="gutter-row" md={4} sm={6}>
+              <Col className="gutter-row" md={4} sm={8}>
                 <Card
                   hoverable
                   style={{
                     width: 120,
                     backgroundColor: "#F1F7F7",
+                    fontWeight: "500",
+                    fontFamily: "'Playpen Sans', cursive",
                   }}
                   cover={
                     <FontAwesomeIcon className="custom-icon" icon={faBolt} />
                   }
-                ></Card>
+                >
+                  Electronics
+                </Card>
               </Col>
 
-              <Col className="gutter-row" md={4} sm={6}>
+              <Col className="gutter-row" md={4} sm={8}>
                 <Card
                   hoverable
                   style={{
                     width: 120,
                     backgroundColor: "#F1F7F7",
+                    fontWeight: "500",
+                    fontFamily: "'Playpen Sans', cursive",
                   }}
                   cover={
                     <FontAwesomeIcon className="custom-icon" icon={faGift} />
                   }
-                ></Card>
+                >
+                  Gift
+                </Card>
+              </Col>
+            </Row>
+          </div>
+          <div className="about-wrapper">
+            <h1>Impossible is not an option!</h1>
+            <p
+              style={{
+                fontWeight: "bold",
+                paddingBlock: "3em",
+                paddingTop: "1.25em",
+              }}
+            >
+              Need to deliver a parcel? Choose Bahon!
+            </p>
+            <Row gutter={16} style={{ justifyContent: "center" }}>
+              <Col className="gutter-row" lg={6} md={8} sm={12}>
+                <Card
+                  // hoverable
+                  style={{
+                    width: 220,
+                    // outline: "auto",
+                  }}
+                  cover={
+                    <FontAwesomeIcon className="custom-icon" icon={faClock} />
+                  }
+                >
+                  <p style={{ fontWeight: "500", fontFamily: "cursive" }}>
+                    Same Day Delivery
+                  </p>
+                  <p style={{ fontSize: "1rem" }}>
+                    Collection prior 12pm, delivery shall be executed within 8
+                    hours.
+                  </p>
+                </Card>
+              </Col>
+              <Col className="gutter-row" lg={6} md={8} sm={12}>
+                <Card
+                  // hoverable
+                  style={{
+                    width: 220,
+                    // outline: "auto",
+                  }}
+                  cover={
+                    <FontAwesomeIcon
+                      className="custom-icon"
+                      icon={faCalendarDay}
+                    />
+                  }
+                >
+                  <p style={{ fontWeight: "500", fontFamily: "cursive" }}>
+                    Next Day Delivery
+                  </p>
+                  <p style={{ fontSize: "1rem" }}>
+                    Collection prior 4pm, we guarantee delivery within 24 hours
+                    within city limits. We shall SMS prior to delivery.
+                  </p>
+                </Card>
+              </Col>
+
+              <Col className="gutter-row" lg={6} md={8} sm={12}>
+                <Card
+                  // hoverable
+                  style={{
+                    width: 220,
+                    // outline: "auto",
+                  }}
+                  cover={
+                    <FontAwesomeIcon className="custom-icon" icon={faCity} />
+                  }
+                >
+                  <p style={{ fontWeight: "500", fontFamily: "cursive" }}>
+                    Subcity Delivery
+                  </p>
+                  <p style={{ fontSize: "1rem" }}>
+                    We provide delivery services to Dhaka and sub-urban/areas of
+                    Dhaka. We are expanding our coverages to meet the daily
+                    growing challenges.
+                  </p>
+                </Card>
+              </Col>
+
+              <Col className="gutter-row" lg={6} md={8} sm={12}>
+                <Card
+                  // hoverable
+                  style={{
+                    width: 220,
+                    // outline: "auto",
+                  }}
+                  cover={
+                    <FontAwesomeIcon
+                      className="custom-icon"
+                      icon={faMapLocationDot}
+                    />
+                  }
+                >
+                  <p style={{ fontWeight: "500", fontFamily: "cursive" }}>
+                    Outside city Delivery
+                  </p>
+                  <p style={{ fontSize: "1rem" }}>
+                    We provide delivery services to Dhaka and sub-urban/areas of
+                    Dhaka. We are expanding our coverages to meet the daily
+                    growing challenges.
+                  </p>
+                </Card>
+              </Col>
+              <Col className="gutter-row" lg={6} md={8} sm={12}>
+                <Card
+                  // hoverable
+                  style={{
+                    width: 220,
+                    // outline: "auto",
+                  }}
+                  cover={
+                    <FontAwesomeIcon
+                      className="custom-icon"
+                      icon={faMoneyBill1}
+                    />
+                  }
+                >
+                  <p style={{ fontWeight: "500", fontFamily: "cursive" }}>
+                    Cash on Delivery
+                  </p>
+                  <p style={{ fontSize: "1rem" }}>
+                    Our delivery staff shall safely deliver your parcels to your
+                    customers. After fulfilling the transaction, Bahon Express
+                    shall release the payment to your preferred account.
+                  </p>
+                </Card>
+              </Col>
+
+              <Col className="gutter-row" lg={6} md={8} sm={12}>
+                <Card
+                  // hoverable
+                  style={{
+                    width: 220,
+                    // outline: "auto",
+                  }}
+                  cover={
+                    <FontAwesomeIcon
+                      className="custom-icon"
+                      icon={faFileExcel}
+                    />
+                  }
+                >
+                  <p style={{ fontWeight: "500", fontFamily: "cursive" }}>
+                    Data Entry
+                  </p>
+                  <p style={{ fontSize: "1rem" }}>
+                    Bahon Express dedicated Customers Support staff shall
+                    provide complimentary assistance to register an account with
+                    Bahon. We are just a call away for your queries, should you
+                    have difficulties in logging into the system.
+                  </p>
+                </Card>
               </Col>
             </Row>
           </div>
