@@ -8,6 +8,7 @@ import {
   Row,
   Col,
   Divider,
+  Carousel,
 } from "antd";
 import { Link } from "react-router-dom";
 import "../styles/home.css";
@@ -32,6 +33,20 @@ import {
 
 const { Header, Footer, Sider, Content } = Layout;
 const items = ["Tracking", "Pricing", "Q&A", "Contact Us"];
+const merchants = [
+  { src: "/Dhaka-Republic.jpg", alt: "dhaka republic" },
+  { src: "/Dhakaiya-Koreana.png", alt: "dhakaiya koreana" },
+  { src: "/eurosiabd.jpg", alt: "eurosia" },
+  { src: "/Happy-Paws-Pet-Shop.png", alt: "happy paws" },
+  { src: "/Khati-organic-food.jpg", alt: "khati organic" },
+  { src: "/Muntaha-Fashion-House.jpg", alt: "muntaha fashion" },
+  { src: "/Palate.jpg", alt: "palate" },
+  { src: "/Spice-Hues.png", alt: "spice hues" },
+  { src: "/Tanzila-Haider-Couture.jpg", alt: "tanzila haider couture" },
+  { src: "/The-Label.png", alt: "the label" },
+  { src: "/Totem-BD.jpg", alt: "vs mask" },
+  { src: "/VS-Mask.png", alt: "vs mask" },
+];
 
 function Home() {
   const [form] = Form.useForm();
@@ -93,7 +108,7 @@ function Home() {
                 Become our Merchant
               </Button>
             </div>
-            <img src="./Bahonweb.svg" alt="bahon logo" />
+            <img src="/Bahonweb.svg" alt="bahon logo" />
           </div>
           <div className="track-wrapper">
             <h1>Track Your Parcel</h1>
@@ -417,28 +432,91 @@ function Home() {
               </Col>
             </Row>
           </div>
-          <p>Why we are?</p>
-          <div class="word-container">
-            <div class="word-line1">Secure way to deliver</div>
-            <div class="word-line2">Smart way to deliver</div>
+          <div className="about-extra">
+            <div className="word-container">
+              <p>Why we are?</p>
+              <div className="word-line1">Secure way to deliver</div>
+              <div className="word-line2">Smart way to deliver</div>
+            </div>
           </div>
-
-          <Footer className="footer">
-            <header>
-              <h2>Quota</h2>
+          <div
+            className="merchants-wrapper"
+            style={{ margin: "auto", marginBlock: "8vh", textAlign: "center" }}
+          >
+            <h1>Our Valued Merchants</h1>
+            <p style={{ fontWeight: "bold", color: "#004188" }}>
+              We provide excellent service to all our customers to further our
+              relationship to a next phase in business activities.
+            </p>
+            <div className="carousel">
+              <Carousel style={{ minHeight: "250px", outline: "auto" }}>
+                {merchants.map((item) => {
+                  <img
+                    src={item.src}
+                    alt={item.alt}
+                    style={{ width: "100px" }}
+                  />;
+                  console.log(item.src);
+                })}
+              </Carousel>
+            </div>
+          </div>
+          <div className="story-wrapper">
+            <h1>Our Story</h1>
+            <p>
+              Bahon Express Ltd., founded in 2020, provides logistic management
+              services to local merchants in Bangladesh.
+            </p>
+            <div className="story-text">
+              <img
+                src="/white-icon-1.png"
+                style={{
+                  backgroundColor: "#3AB569",
+                  padding: "15px",
+                  marginBlock: "3vh",
+                  marginInline: "6vw",
+                  width: "20vw",
+                }}
+              />
               <p>
-                "Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Omnis, accusantium?"
+                Bahon Express Ltd., founded in 2020, provides logistic
+                management services to local merchants in Bangladesh. We deliver
+                all sorts of E-commerce packages both B2B and B2C with the
+                ultimate delivery solution. Bahon Express Ltd. has vast
+                knowledge in the logistics business. We thrive continuously to
+                implement, respond and cater to our merchants’ requirements,
+                Bahon Express is in the process of expanding the area of its
+                competency, establishing itself as one of the leading logistics
+                service providing companies. Our comprehensive package of
+                services and solutions cater to all of the needs of merchants.
+                With a responsible, equitable solution, we make customized
+                logistical support to satisfy the priorities of each customer.
               </p>
-              <ul class="icons">
-                <ion-icon class="icon" name="logo-facebook"></ion-icon>
-                <ion-icon class="icon" name="logo-instagram"></ion-icon>
-                <ion-icon class="icon" name="logo-twitter"></ion-icon>
-                <ion-icon class="icon" name="logo-youtube"></ion-icon>
-              </ul>
+            </div>
+          </div>
+          <div className="merchant-wrapper">
+            <div className="img-text-wrapper">
+              <img src="white-icon-1.png" />
+              <div className="text-wrapper">
+                <h1 style={{ color: "white" }}>We're Waiting To Help You</h1>
+                <p style={{ color: "white", fontWeight: "400" }}>
+                  Get in touch with us today and let’s start transforming your
+                  business from the ground up
+                </p>
+              </div>
+              <Button className="become-btn">Become our merchant</Button>
+            </div>
+          </div>
+          <Footer className="footer">
+            <header className="footer-header">
+              <img src="/Bahon.png" />
+              <p>
+                Bahon Express is the trusted platform that provides parcel
+                delivery system based on an app where you can track your parcel
+              </p>
             </header>
             <aside>
-              <ul class="category">
+              <ul className="category">
                 <li>
                   <h3>Project</h3>
                 </li>
@@ -447,7 +525,7 @@ function Home() {
                 <li>Flats</li>
                 <li>Apartments</li>
               </ul>
-              <ul class="category">
+              <ul className="category">
                 <li>
                   <h3>Company</h3>
                 </li>
@@ -456,24 +534,7 @@ function Home() {
                 <li>Security</li>
                 <li>Selling</li>
               </ul>
-              <ul class="category">
-                <li>
-                  <h3>Movement</h3>
-                </li>
-                <li>Movement</li>
-                <li>Support us</li>
-                <li>Pricing</li>
-                <li>Renting</li>
-              </ul>
-              <ul class="category">
-                <li>
-                  <h3>Help</h3>
-                </li>
-                <li>Privacy</li>
-                <li>Contact</li>
-                <li>FAQs</li>
-                <li>Blog</li>
-              </ul>
+              
             </aside>
           </Footer>
         </Content>
