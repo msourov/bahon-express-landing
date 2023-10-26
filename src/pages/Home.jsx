@@ -76,7 +76,7 @@ function Home() {
             backgroundColor: "white",
             display: "flex",
             flexDirection: "column",
-            paddingInline: "5vw",
+            // paddingInline: "5vw",
             paddingBlock: "3vw",
           }}
         >
@@ -417,6 +417,12 @@ function Home() {
               </Col>
             </Row>
           </div>
+          <p>Why we are?</p>
+          <div class="word-container">
+            <div class="word-line1">Secure way to deliver</div>
+            <div class="word-line2">Smart way to deliver</div>
+          </div>
+
           <Footer className="footer">
             <header>
               <h2>Quota</h2>
