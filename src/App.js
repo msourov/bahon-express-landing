@@ -1,10 +1,8 @@
-import './App.css';
+import "./App.css";
 
+import HomeLayout from "./pages/HomeLayout";
 function App() {
-  return (
-    <div className="App">
-    </div>
-  );
+  return <HomeLayout />;
 }
 
 export default App;

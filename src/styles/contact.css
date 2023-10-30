@@ -1,0 +1,36 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin-block: 3em;
+}
+.contact-texts {
+  display: flex;
+  flex-direction: column;
+  /* gap: 2em; */
+  margin-block: 3em;
+}
+.contact-space {
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5em;
+}
+.contact-space p {
+  color: white;
+  margin-block: 1.2em;
+}
+
+.contact-space Space {
+  align-self: stretch;
+}
+
+.contact-container h2 {
+  color: #004188;
+  margin-block: 1em;
+}
+.contact-form {
+  display: flex;
+  place-content: center;
+  margin-top: 5em;
+}

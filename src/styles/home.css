@@ -9,9 +9,11 @@
   background-color: white;
   display: flex;
   text-align: center;
-  position: relative;
+  top: 0;
+  position: sticky;
   justify-content: space-between;
   font-weight: 700;
+  z-index: 1000;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 h1 {
@@ -21,6 +23,11 @@ h1 {
 p {
   font-size: 1.2rem;
   color: rgb(65, 63, 63);
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
 }
 .word-container p {
   color: white;
@@ -237,76 +244,10 @@ p {
   --accent: black;
 }
 
-main {
-  position: relative;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  background-color: var(--accent);
-
-  & nav {
-    position: fixed;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-
-    & .logo {
-      font-size: 1.25rem;
-    }
-    & .menu {
-      font-size: 1.5rem;
-    }
-  }
-
-  & > header {
-    position: relative;
-    height: 70vh;
-    display: grid;
-    align-content: center;
-    text-align: center;
-    gap: 0.5rem;
-    font: 1rem helvetica, sans-serif;
-
-    & p {
-      font-size: 0.8rem;
-      font-style: italic;
-    }
-
-    & span {
-      position: absolute;
-      bottom: 2rem;
-      left: 50%;
-      transform: translateY(-50%);
-      width: 13px;
-      height: 13px;
-      background-color: black;
-      border-radius: 50%;
-
-      &::before,
-      &::after {
-        content: "";
-        position: absolute;
-        width: 11px;
-        height: 11px;
-        border: 1px solid black;
-        border-radius: 50%;
-        cursor: pointer;
-      }
-
-      &::before {
-        left: -18px;
-      }
-      &::after {
-        left: 18px;
-      }
-    }
-  }
-}
-
 .footer {
-  margin-top: 5em;
-  z-index: 0;
+  margin-top: 2em;
+  /* z-index: 0; */
+  position: sticky;
   width: 100%;
   background-color: white;
   font: 0.9rem helvetica, sans-serif;
