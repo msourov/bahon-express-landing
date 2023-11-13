@@ -5,6 +5,7 @@ import Tracking from "./pages/Tracking";
 import Pricing from "./pages/Pricing";
 import QnA from "./pages/QnA";
 import Contact from "./pages/Contact";
+import DeleteAccount from "./pages/DeleteAccount";
 
 const router = createBrowserRouter([
   {
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
         path: "/contact",
         element: <Contact />,
       },
+      {
+        path: "/delete-account",
+        element: <DeleteAccount />,
+      },
       {
         path: "/",
         element: <HomePage />,

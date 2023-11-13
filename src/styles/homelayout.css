@@ -4,81 +4,58 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+/* Show the menu dropdown when the user clicks on the menu button */
+
+/* Media query for small screens (max-width: 700px) */
+/* Regular styles for the header */
 .header {
-  background-color: white;
-}
-.dropdown-menu {
-  position: absolute;
-  right: 0;
-  top: 100%;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-menu a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-
-.dropdown-menu a:hover {
-  background-color: #ddd;
-  color: black;
-}
-@media (max-width: 750px) {
-  .links {
-    display: none;
-  }
-  .dropdown {
-    display: block;
-    float: left;
-    overflow: hidden;
-  }
-  .dropdown-toggle {
-    display: block;
-    cursor: pointer;
-    padding: 10px;
-  }
-  .dropdown-menu {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    z-index: 1;
-  }
-  .dropdown-menu a {
-    float: none;
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-  }
-  .dropdown-menu a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  /* Show the dropdown menu when the user clicks on the dropdown toggle */
-  .dropdown:hover .dropdown-menu {
-    display: block;
-  }
-}
-
-/* Place the image to the left end and the items to the right */
-.header {
+  background: #fff; /* Replace with your preferred background color */
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
+
 .links {
   display: flex;
+  gap: 10px;
   align-items: center;
+}
+
+/* Media query for small screens (max-width: 750px) */
+@media (max-width: 750px) {
+  .links {
+    display: none; /* Hide the regular links on small screens */
+  }
+
+  /* Show the menu button */
+  .links {
+    display: block;
+  }
+
+  .ant-menu-horizontal {
+    display: none; /* Hide the horizontal menu */
+  }
+
+  .login-links {
+    display: flex;
+    flex-direction: column; /* Display login links vertically */
+    gap: 10px;
+  }
+}
+
+/* Styles for the menu button */
+.menu-button {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.login-links {
+  display: flex;
+  flex-direction: column; /* Display login links vertically */
   gap: 10px;
 }
 h1 {
@@ -101,21 +78,6 @@ p {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-.links {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-}
-.login-links {
-  display: flex;
-  align-items: center;
-}
-.login-links a {
-  padding: 0;
-  color: white;
-  background-color: #5aa86c;
-  border-radius: 10px;
-}
 
 .hero-wrapper {
   display: flex;
@@ -124,19 +86,6 @@ p {
   /* outline: auto; */
   padding: 0;
   margin: 0;
-}
-@media (max-width: 768px) {
-  .hero-wrapper {
-    display: flex;
-    flex-direction: column-reverse;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    /* outline: auto; */
-  }
-  .text-wrapper Button {
-    align-self: center;
-  }
 }
 .hero-wrapper img {
   width: 40em;
@@ -159,20 +108,11 @@ p {
 .track-wrapper {
   text-align: center;
   margin-top: 7em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
 }
 .track-form {
   justify-content: center;
-  align-self: center;
-  place-content: center;
-  width: 30%;
+  align-items: center;
   margin-block: 3em;
-  @media (max-width: 500px) {
-    width: 60vw;
-  }
 }
 .track-h1 {
   color: #5aa86c;
@@ -181,15 +121,10 @@ p {
 .btn {
   background-color: #5aa86c;
   font-weight: bold;
-  margin-inline: 1em;
-  margin: auto;
+  padding-inline: 1.2em;
 }
 .delivery-wrapper {
   /* outline: auto; */
-  display: flex;
-  flex-direction: column;
-  /* justify-content: space-evenly; */
-  /* align-items: center; */
   text-align: center;
   margin-top: 5em;
 }
@@ -197,10 +132,10 @@ p {
   font-size: 3.25em;
 }
 /* h1 {
-  color: #5aa86c;
-  font-size: 2.5em;
-  font-family: ;
-} */
+    color: #5aa86c;
+    font-size: 2.5em;
+    font-family: ;
+  } */
 
 .custom-icon {
   font-size: 4em;
@@ -208,13 +143,12 @@ p {
   padding-top: 0.5em;
 }
 /* .custom-icon:hover {
-  background-color: grey;
-} */
+    background-color: grey;
+  } */
 
-/* .gutter-row {
+.gutter-row {
   padding-block: 10px;
-  align-items: center;
-} */
+}
 
 .about-wrapper {
   text-align: center;
@@ -264,19 +198,12 @@ p {
 .story-wrapper {
   text-align: center;
   display: block;
-  margin-bottom: 3em;
-}
-.story-wrapper p::first-letter {
-  font-size: 2em;
 }
 .story-text {
   display: flex;
   padding-block: 4vh;
   padding-inline: 7vw;
   justify-content: space-between;
-}
-.story-text p {
-  text-align: justify;
 }
 @media (max-width: 768px) {
   .story-text {
@@ -299,26 +226,19 @@ p {
   );
 }
 .merchant-wrapper img {
-  /* width: ; */
+  width: 15vw;
   padding-left: 5em;
   color: "white";
   padding-block: 4%;
 }
-
+.text-wrapper {
+  /* outline: auto; */
+}
 .img-text-wrapper {
   width: 100%;
   display: flex;
-  gap: 2em;
-  position: sticky;
-}
-.img-text-wrapper img {
-  width: 10em;
-}
-@media (max-width: 850) {
-  .img-text-wrapper {
-    display: flex;
-    flex-direction: column;
-  }
+  gap: 5%;
+  position: relative;
 }
 .img-text-wrapper Button {
   color: #5aa86c;
@@ -328,32 +248,12 @@ p {
   right: 4em;
   top: 50%;
   transform: translateY(-50%);
-  @media (max-width: 664px) {
-    margin-top: 15px;
-  }
 }
 .img-text-wrapper Button:hover {
   border: 2px solid salmon;
   /* border-color: #222324; */
   color: white;
-}
-
-.text-wrapper-h1 {
-  color: #fff;
-  font-size: 3em;
   /* width: 100%; */
-  @media (max-width: 664px) {
-    font-size: 2rem;
-  }
-}
-.text-wrapper-p {
-  color: #fff;
-  font-weight: 400;
-  /* width: 100%; */
-  @media (max-width: 664px) {
-    margin-top: 25px;
-    font-size: 1rem;
-  }
 }
 .text-wrapper {
   width: 50%;

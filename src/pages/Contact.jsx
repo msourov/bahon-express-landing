@@ -31,8 +31,8 @@ function Contact() {
       <Space direction="horizontal" className="contact-space">
         <Card
           style={{
-            width: 500,
-            height: 300,
+            width: "30em",
+            height: "35vh",
             backgroundColor: "#5aa86c",
             color: "white",
             position: "relative",
@@ -64,8 +64,8 @@ function Contact() {
         <Card
           size="default"
           style={{
-            width: 500,
-            height: 300,
+            width: "30em",
+            height: "35vh",
             backgroundColor: "#5aa86c",
             color: "white",
           }}
@@ -121,7 +121,7 @@ function Contact() {
           {...layout}
           name="nest-messages"
           onFinish={onFinish}
-         
+
           // validateMessages={validateMessages}
         >
           <Form.Item

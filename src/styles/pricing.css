@@ -10,8 +10,8 @@
 .content {
   display: flex;
   justify-content: space-around;
-  margin: 5%;
-  padding-inline: 3em;
+  /* margin: 5%; */
+  padding-inline: 1em;
   /* outline: auto; */
   align-items: center;
 }
@@ -31,7 +31,7 @@
   }
 }
 .space {
-  margin: 0;
+  margin: 1.25em;
   display: flex;
   flex-direction: column;
   text-align: start;

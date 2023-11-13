@@ -7,21 +7,26 @@ const columns = [
     title: "",
     dataIndex: "empty",
     key: "empty",
+    width: "25%",
   },
   {
     title: "Inside City",
     dataIndex: "insideCity",
     key: "insideCity",
+    width: "25%",
   },
   {
     title: "Subcity",
     dataIndex: "subcity",
     key: "subcity",
+    width: "25%",
   },
   {
     title: "Outside City",
     dataIndex: "outsideCity",
     key: "outsideCity",
+    width: "25%",
+    
   },
 ];
 
@@ -56,9 +61,8 @@ function Pricing() {
           // style={{ display: "flex", justifyContent: "center" }}
         >
           <img src="/illustration-07.png" alt="parcel" />
-          <div className="table">
-            <Table columns={columns} dataSource={data} pagination={false} />
-          </div>
+          <Table columns={columns} dataSource={data} pagination={false} />
+          
         </div>
         <div className="space">
           <Space className="space">

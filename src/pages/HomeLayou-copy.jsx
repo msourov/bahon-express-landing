@@ -1,23 +1,32 @@
+import { useState } from "react";
+
 import { Layout, Menu, Button } from "antd";
-import { Link, Outlet } from "react-router-dom";
-import Navbar from "../Navbar-main";
-import "../styles/home.css";
+import { Link, Outlet, useNavigate } from "react-router-dom";
+// import Navbar from "../Navbar";
+
+import "../styles/homelayout.css";
 
 const { Header, Content, Footer } = Layout;
-// const items = [
-//   { key: "home", label: "Home", link: "/" },
-//   { key: "pricing", label: "Pricing", link: "/pricing" },
-//   { key: "QnA", label: "Q&A", link: "/QnA" },
-//   { key: "contact", label: "Contact Us", link: "/contact" },
-// ];
+const items = [
+  { key: "home", label: "Home", link: "/" },
+  { key: "pricing", label: "Pricing", link: "/pricing" },
+  { key: "QnA", label: "Q&A", link: "/QnA" },
+  { key: "contact", label: "Contact Us", link: "/contact" },
+];
 
-// const menuItems = items.map((item) => (
-//   <Menu.Item key={item.key}>
-//     <Link to={item.link}>{item.label}</Link>
-//   </Menu.Item>
-// ));
+const menuItems = items.map((item) => (
+  <Menu.Item key={item.key}>
+    <Link to={item.link}>{item.label}</Link>
+  </Menu.Item>
+));
 
 function HomeLayout() {
+  const [menuVisible, setMenuVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setMenuVisible(!menuVisible);
+  };
+
   return (
     <>
       <Layout
@@ -29,7 +38,12 @@ function HomeLayout() {
           // alignItems: "center",
         }}
       >
-        <Navbar />
+        {/* <Navbar
+          menuItems={menuItems}
+          menuVisible={menuVisible}
+          toggleMenu={toggleMenu}
+        /> */}
+
         <Content>
           <Outlet />
         </Content>
@@ -65,14 +79,6 @@ function HomeLayout() {
               <li>Capital</li>
               <li>Security</li>
               <li>Selling</li>
-              <Button
-                type="link"
-                href="./delete-account"
-                danger
-                style={{ margin: 0, padding: 0 }}
-              >
-                Delete account
-              </Button>
             </ul>
           </aside>
         </Footer>

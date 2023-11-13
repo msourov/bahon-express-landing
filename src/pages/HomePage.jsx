@@ -77,14 +77,14 @@ function HomePage() {
               Become our Merchant
             </Button>
           </div>
-          <img src="/Bahonweb.svg" alt="bahon logo" />
+          <img src="/Bahonweb.svg" alt="bahon logo" className="delivery-man" />
         </div>
         <div className="track-wrapper">
           <h1>Track Your Parcel</h1>
           <Form
             form={form}
             name="horizontal_login"
-            layout="inline"
+            layout="block"
             className="track-form"
           >
             <Form.Item name="order_id">
@@ -105,7 +105,7 @@ function HomePage() {
         <div className="delivery-wrapper">
           <h1>What we Deliver</h1>
 
-          <Divider
+          <div
             style={{
               color: "gray",
               fontSize: "1.25rem",
@@ -115,8 +115,93 @@ function HomePage() {
             }}
           >
             Some kind of product we deliver to our respected client
-          </Divider>
-          <Row gutter={16} style={{ justifyContent: "center" }}>
+          </div>
+          <hr />
+        </div>
+        <Row
+          gutter={20}
+          style={{
+            marginTop: "2em",
+            display: "flex",
+            justifyContent: "center",
+            textAlign: "center",
+          }}
+        >
+          <Col xs={24} lg={4} md={4} sm={12} style={{ marginTop: "10px" }}>
+            <Card
+              hoverable
+              cover={
+                <FontAwesomeIcon className="custom-icon" icon={faFileLines} />
+              }
+            >
+              Document
+            </Card>
+          </Col>
+
+          <Col xs={24} lg={4} md={4} sm={12} style={{ marginTop: "10px" }}>
+            <Card
+              hoverable
+              cover={
+                <FontAwesomeIcon
+                  className="custom-icon"
+                  icon={faBoxesPacking}
+                />
+              }
+            >
+              Package
+            </Card>
+          </Col>
+
+          <Col xs={24} lg={4} md={4} sm={12} style={{ marginTop: "10px" }}>
+            <Card
+              hoverable
+              cover={
+                <FontAwesomeIcon className="custom-icon" icon={faBurger} />
+              }
+            >
+              Food
+            </Card>
+          </Col>
+
+          <Col xs={24} lg={4} md={4} sm={12} style={{ marginTop: "10px" }}>
+            <Card
+              hoverable
+              cover={
+                <FontAwesomeIcon
+                  className="custom-icon"
+                  icon={faCartShopping}
+                />
+              }
+            >
+              Grocery
+            </Card>
+          </Col>
+          <Col xs={24} lg={4} md={4} sm={12} style={{ marginTop: "10px" }}>
+            <Card
+              hoverable
+              cover={<FontAwesomeIcon className="custom-icon" icon={faBolt} />}
+            >
+              Electronics
+            </Card>
+          </Col>
+          <Col xs={24} lg={4} md={4} sm={12} style={{ marginTop: "10px" }}>
+            <Card
+              hoverable
+              cover={<FontAwesomeIcon className="custom-icon" icon={faGift} />}
+            >
+              Gift
+            </Card>
+          </Col>
+        </Row>
+        {/* <Row
+           
+            gutter={20}
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              textAlign: "center",
+            }}
+          >
             <Col className="gutter-row" md={4} sm={8}>
               <Card
                 hoverable
@@ -222,8 +307,7 @@ function HomePage() {
                 Gift
               </Card>
             </Col>
-          </Row>
-        </div>
+          </Row> */}
         <div className="about-wrapper">
           <h1>Impossible is not an option!</h1>
           <p
@@ -410,10 +494,10 @@ function HomePage() {
         </div>
         <div className="story-wrapper">
           <h1>Our Story</h1>
-          <p>
+          {/* <p>
             Bahon Express Ltd., founded in 2020, provides logistic management
             services to local merchants in Bangladesh.
-          </p>
+          </p> */}
           <div className="story-text">
             <img
               src="/white-icon-1.png"
@@ -444,15 +528,19 @@ function HomePage() {
         </div>
         <div className="merchant-wrapper">
           <div className="img-text-wrapper">
-            <img src="white-icon-1.png" alt="bahon logo" />
+            <div>
+              <img src="white-icon-1.png" alt="bahon logo" />
+            </div>
             <div className="text-wrapper">
-              <h1 style={{ color: "white" }}>We're Waiting To Help You</h1>
-              <p style={{ color: "white", fontWeight: "400" }}>
+              <p className="text-wrapper-h1">We're Waiting To Help You</p>
+              <p className="text-wrapper-p">
                 Get in touch with us today and let’s start transforming your
                 business from the ground up
               </p>
             </div>
-            <Button className="become-btn">Become our merchant</Button>
+            <div>
+              <Button className="become-btn">Become our merchant</Button>
+            </div>
           </div>
         </div>
       </div>
