@@ -1,0 +1,7 @@
+.qna-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5em;
+  margin-block: 2em;
+}
